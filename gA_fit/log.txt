@@ -1,0 +1,442 @@
+ +------------------------------------------------------+
+ |                                                      |
+ | BAT version 1.0.0                                    |
+ | Copyright (C) 2007-2018, the BAT core developer team |
+ | All rights reserved.                                 |
+ |                                                      |
+ | For the licensing terms see doc/COPYING              |
+ | For documentation see http://mpp.mpg.de/bat          |
+ | Please cite: DOI 10.1016/j.cpc.2009.06.026           |
+ |              http://arxiv.org/abs/0808.2552          |
+ |                                                      |
+ +------------------------------------------------------+
+Summary : Opening logfile log.txt
+Summary : Test model created
+Summary : Finding mode using Minuit
+Summary : Marginalize using Metropolis
+Summary : Pre-run Metropolis MCMC for model "shell_neg" ...
+Summary :  --> Perform MCMC pre-run with 4 chains, each with maximum 100000 iterations
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 500 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (zero). Scale decreased to 1.259
+Detail  :          chain 1 is below 15 % (zero). Scale decreased to 1.259
+Detail  :          chain 2 is below 15 % (zero). Scale decreased to 1.259
+Detail  :          chain 3 is below 15 % (zero). Scale decreased to 1.259
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 1000 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (zero). Scale decreased to 0.8392
+Detail  :          chain 1 is below 15 % (zero). Scale decreased to 0.8392
+Detail  :          chain 2 is below 15 % (zero). Scale decreased to 0.8392
+Detail  :          chain 3 is below 15 % (zero). Scale decreased to 0.8392
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 1500 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (zero). Scale decreased to 0.5594
+Detail  :          chain 1 is below 15 % (zero). Scale decreased to 0.5594
+Detail  :          chain 2 is below 15 % (zero). Scale decreased to 0.5594
+Detail  :          chain 3 is below 15 % (zero). Scale decreased to 0.5594
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 2000 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (zero). Scale decreased to 0.373
+Detail  :          chain 1 is below 15 % (zero). Scale decreased to 0.373
+Detail  :          chain 2 is below 15 % (zero). Scale decreased to 0.373
+Detail  :          chain 3 is below 15 % (zero). Scale decreased to 0.373
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 2500 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (zero). Scale decreased to 0.2486
+Detail  :          chain 1 is below 15 % (zero). Scale decreased to 0.2486
+Detail  :          chain 2 is below 15 % (zero). Scale decreased to 0.2486
+Detail  :          chain 3 is below 15 % (zero). Scale decreased to 0.2486
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 3000 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (zero). Scale decreased to 0.1658
+Detail  :          chain 1 is below 15 % (0.6 %). Scale decreased to 0.1658
+Detail  :          chain 2 is below 15 % (0.2 %). Scale decreased to 0.1658
+Detail  :          chain 3 is below 15 % (zero). Scale decreased to 0.1658
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 3500 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (0.2 %). Scale decreased to 0.1105
+Detail  :          chain 1 is below 15 % (0.6 %). Scale decreased to 0.1105
+Detail  :          chain 2 is below 15 % (0.6 %). Scale decreased to 0.1105
+Detail  :          chain 3 is below 15 % (zero). Scale decreased to 0.1105
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 4000 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (0.8 %). Scale decreased to 0.07367
+Detail  :          chain 1 is below 15 % (1 %). Scale decreased to 0.07367
+Detail  :          chain 2 is below 15 % (1 %). Scale decreased to 0.07367
+Detail  :          chain 3 is below 15 % (1 %). Scale decreased to 0.07367
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 4500 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (3 %). Scale decreased to 0.04911
+Detail  :          chain 1 is below 15 % (3 %). Scale decreased to 0.04911
+Detail  :          chain 2 is below 15 % (3 %). Scale decreased to 0.04911
+Detail  :          chain 3 is below 15 % (3 %). Scale decreased to 0.04911
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 5000 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (6 %). Scale decreased to 0.03274
+Detail  :          chain 1 is below 15 % (7 %). Scale decreased to 0.03274
+Detail  :          chain 2 is below 15 % (5 %). Scale decreased to 0.03274
+Detail  :          chain 3 is below 15 % (5 %). Scale decreased to Detail  Detail  :      * Efficiency status: Efficiencies not within predefined range after 5500 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (13 %). Scale decreased to Summary :  --> Set of 4 Markov chains converged within 6000 iterations, and all scales are adjusted.
+Summary :  --> 11 updates to multivariate proposal function's covariances were made.
+Detail  :  --> Scale factors and efficiencies (mDetail  :      * Efficiency status: Efficiencies not within predefined range after 6000 iterations. Efficiency of 
+Detail  :          chain 1 is below 15 % (14 %). Scale decreased to 0.01455
+Detail  :          chain 2 is below 15 % (14 %). Scale decreased to 0.01455
+Detail  :          chain 3 is below 15 % (15 %). Scale decreased to 0.01455
+Summary :  --> Set of 4 Markov chains converged within 6500 iterations, and all scales are adjusted.Detail  :  --> iteration number  10000 ( 10 %)
+Detail  :  --> iteration number  20000 ( 20 %)
+Detail  :  --> iteration number  30000 ( 30 %)
+Detail  :  --> iteration number  40000 ( 40 %)
+Detail  :  --> iteration number  50000 ( 50 %)
+Detail  :  --> iteration number  60000 ( 60 %)
+Detail  :  --> iteration number  70000 ( 70 %)
+Detail  :  --> iteration number  80000 ( 80 %)
+Detail  :  --> iteration number  90000 ( 90 %)
+Detail  :  --> iteration number 100000 (100 %)
+Summary :  --> Markov chains ran for 100000 iterations.
+Detail  : Detail  :  --> iteration number  90000 ( 90 %)
+Detail  :  --> iteration number 100000 (100 %)
+Summary :  --> Markov chains ran for 100000 iterations.
+Detail  :  --> Efficiencies (measured in 100000 iterations):
+Detail  :        - Chain : Efficiency
+Detail  :              0 :     21.6 %
+Detail  :              1 :     21.9 %
+Detail  :              2 :     21.6 %
+Detail  :              3 :     17.8 %
+Detail  :  --> Global mode from MCMC:
+Detail  :           ga :    1.1867
+Detail  :           s  :    1.539
+Detail  :           b  :    4.978e+04
+Summary : Finding mode using Minuit
+Summary : Printing all marginalized distributions (4 x 1D + 6 x 2D = 10) into file output/ibfm2_pos_plots.pdf
+Summary : Marginalizing prior...
+Summary : Marginalize using Metropolis
+Summary : Pre-run Metropolis MCMC for model "ibfm2_pos_prior" ...
+Summary :  --> Perform MCMC pre-run with 4 chains, each with maximum 100000 iterations
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 500 iterations. Efficiency of 
+Detail  :          chain 0 is above 35 % (61 %). Scale increased to 2.832
+Detail  :          chain 1 is above 35 % (67 %). Scale increased to 2.832
+Detail  :          chain 2 is above 35 % (50 %). Scale increased to 2.832
+Detail  :          chain 3 is above 35 % (78 %). Scale increased to 2.832
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 1000 iterations. Efficiency of 
+Detail  :          chain 0 is above 35 % (77 %). Scale increased to 4.248
+Detail  :          chain 1 is above 35 % (100 %). Scale increased to 4.248
+Detail  :          chain 2 is above 35 % (52 %). Scale increased to 4.248
+Detail  :          chain 3 is above 35 % (56 %). Scale increased to 4.248
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 1500 iterations. Efficiency of 
+Detail  :          chain 0 is above 35 % (55 %). Scale increased to 6.372
+Detail  :          chain 3 is above 35 % (68 %). Scale increased to 6.372
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 2000 iterations. Efficiency of 
+Detail  :          chain 0 is above 35 % (36 %). Scale increased to 9.559
+Detail  :          chain 1 is above 35 % (54 %). Scale increased to 6.372
+Detail  :          chain 2 is above 35 % (51 %). Scale increased to 6.372
+Detail  :          chain 3 is above 35 % (69 %). Scale increased to 9.559
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 2500 iterations. Efficiency of 
+Detail  :          chain 1 is above 35 % (45 %). Scale increased to 9.559
+Detail  :          chain 3 is above 35 % (37 %). Scale increased to 14.34
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 3000 iterations. Efficiency of 
+Detail  :          chain 1 is above 35 % (42 %). Scale increased to 14.34
+Detail  :          chain 2 is above 35 % (39 %). Scale increased to 9.559
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 3500 iterations. Efficiency of 
+Detail  :          chain 1 is above 35 % (100 %). Scale increased to 21.51
+Detail  :          chain 2 is above 35 % (43 %). Scale increased to 14.34
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 4000 iterations. Efficiency of 
+Detail  :          chain 0 is above 35 % (39 %). Scale increased to 14.34
+Detail  :          chain 1 is below 15 % (8 %). Scale decreased to 14.34
+Detail  :          chain 2 is above 35 % (45 %). Scale increased to 21.51
+Detail  :          chain 3 is above 35 % (39 %). Scale increased to 21.51
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 4500 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (11 %). Scale decreased to 9.559
+Detail  :          chain 2 is below 15 % (9 %). Scale decreased to 14.34
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 5000 iterations. Efficiency of 
+Detail  :          chain 0 is above 35 % (60 %). Scale increased to 14.34
+Detail  :          chain 2 is below 15 % (12 %). Scale decreased to 9.559
+Detail  :          chain 3 is below 15 % (7 %). Scale decDetail  :  --> iteration number  30000 ( 30 %)
+Detail  :  --> iteration number  40000 ( 40 %)
+Detail  :  --> iteration number  50000 ( 50 %)
+Detail  :  --> iteration number  60000 ( 60 %)
+Detail  :  --> iteration number  70000 ( 70 %)
+Detail  :  --> iteration number  80000 ( 80 %)
+Detail  :  --> iteration number  90000 ( 90 %)
+Detail  :  --> iteration number 100000 (100 %)
+Summary :  --> Markov chains ran for 100000 iterations.
+Detail  :  --> Efficiencies (measured in 100000 iterations):
+Detail  :        - Chain : Efficiency
+Detail  :              0 :     19.0 %
+Detail  :              1 :     66.2 %
+Detail  :              2 :     29.3 %
+Detail  :              3 :     37.3 %
+Detail  :  --> Global mode from MCMC:
+Detail  :           ga :    0.52183
+Detail  :           s  :   -1.2256
+Detail  :           b  :    66532.8
+Summary : Printing knowledgeDetail  :  --> iteration number  90000 ( 90 %)
+Detail  :  --> iteration number 100000 (100 %)
+Summary :  --> Markov chains ran for 100000 iterations.
+Detail  :  --> Efficiencies (measured in 100000 iterations):
+Detail  :        - Chain : Efficiency
+Detail  :              0 :     41.4 %
+Detail  :              1 :     48.7 %
+Detail  :              2 :     57.3 %
+Detail  :              3 :     32.6 %
+Detail  :  --> Global mode from MCMC:
+Detail  :           ga :    0.525932
+Detail  :           s  :   -2.05151
+Detail  :           b  :    24215.2
+Summary : Printing knowledge update plots (4 x 1D + 6 x 2D = 10) into file output/shell_neg_update.pdf
+Summary : 
+Summary :  -----------------------------------------------------
+Summary :  Summary
+Summary :  -----------------------------------------------------
+Summary : 
+Summary :  Model summary
+Summary :  =============
+Summary :  Model: shell_neg
+Summary :  Number of parameters: 3
+Summary : 
+Summary :  List of parameters and ranges:
+Summary :  0) ga : [0.5, 1.3]
+Summary :  1) s  : [-3, 0]
+Summary :  2) b  : [0, 100000]
+Summary : 
+Summary :  List of observables and ranges:
+Summary :  0) T : [0, 2e+16]
+Summary : 
+Summary : 
+Summary :  Results of the optimization
+Summary :  ===========================
+Summary :  Optimization algorithm used: Minuit
+Summary :  Best Fit Results
+Summary :  ===========================
+Summary :  Log of the maximum posterior: -4182.733473
+Summary : 
+Summary :  Global mode:
+Summary :  0)  Parameter "ga" : 0.901715 +- 0.00181471
+Summary :  1)  Parameter "s"  : -1.51373 +- 0.00828195
+Summary :  2)  Parameter "b"  : 51313.5 +- 351.359
+Summary : 
+Summary :  Marginalization algorithm used: Metropolis
+Summary : 
+Summary :  Results of the marginalization
+Summary :  ==============================
+Summary :  List of variables and properties of the marginalized distributions:
+Summary : 
+Summary :   (0) Parameter "ga" :
+Summary :       Mean +- sqrt(Variance):         +0.901625 +- 0.00186288
+Summary :       Median +- central 68% interval: +0.901656 + 0.00184107 - 0.00188594
+Summary :       (Marginalized) mode:            +0.902
+Summary :        5% quantile:                   +0.898442
+Summary :       10% quantile:                   +0.899221
+Summary :       16% quantile:                   +0.89977
+Summary :       84% quantile:                   +0.903497
+Summary :       90% quantile:                   +0.903981
+Summary :       95% quantile:                   +0.904678
+Summary :       Smallest interval containing 71.7% and local mode:
+Summary :       (0.9, 0.904) (local mode at 0.902 with rel. height 1; rel. area 1)
+Summary : 
+Summary :   (1) Parameter "s" :
+Summary :       Mean +- sqrt(Variance):         -1.51328 +- 0.00868153
+Summary :       Median +- central 68% interval: -1.51345 + 0.00850368 - 0.00837233
+Summary :       (Marginalized) mode:            -1.5135
+Summary :        5% quantile:                   -1.52727
+Summary :       10% quantile:                   -1.52415
+Summary :       16% quantile:                   -1.52182
+Summary :       84% quantile:                   -1.50495
+Summary :       90% quantile:                   -1.50224
+Summary :       95% quantile:                   -1.4983
+Summary :       Smallest interval containing 71.1% and local mode:
+Summary :       (-1.524, -1.506) (local mode at -1.5135 with rel. height 1; rel. area 1)
+Summary : 
+Summary :   (2) Parameter "b" :
+Summary :       Mean +- sqrt(Variance):         +51319.8 +- 353.661
+Summary :       Median +- central 68% interval: +51323.3 + 350.702 - 361.783
+Summary :       (Marginalized) mode:            +51350
+Summary :        5% quantile:                   +50728.6
+Summary :       10% quantile:                   +50855.9
+Summary :       16% quantile:                   +50961.6
+Summary :       84% quantile:                   +51674
+Summary :       90% quantile:                   +51774.9
+Summary :       95% quantile:                   +51898
+Summary :       Smallest interval containing 73.9% and local mode:
+Summary :       (50900, 51700) (local mode at 51350 with rel. height 1; rel. area 1)
+Summary : 
+Summary :   (3) Observable "T" :
+Summary :       Mean +- sqrt(Variance):         +7.49878e+15 +- 1.48242e+13
+Summary :       Median +- central 68% interval: +7.49842e+15 + 1.73256e+13 - 1.57641e+13
+Summary :       (Marginalized) mode:            +7.49e+15
+Summary :        5% quantile:                   +7.46933e+15
+Summary :       10% quantile:                   +7.47944e+15
+Summary :       16% quantile:                   +7.48265e+15
+Summary :       84% quantile:                   +7.51574e+15
+Summary :       90% quantile:                   +7.51883e+15
+Summary :       95% quantile:                   +7.52734e+15
+Summary :       Smallest interval containing 82.0% and local mode:
+Summary :       (7.48e+15, 7.52e+15) (local mode at 7.49e+15 with rel. height 1; rel. area 1)
+Summary : 
+Summary :  Status of the MCMC
+Summary :  ==================
+Summary :  Convergence reached:                    yes
+Summary :  Number of iterations until convergence: 6500
+Summary :  Number of chains:                       4
+Summary :  Number of iterations per chain:         100000
+Detail  :  Scale factors and efficiencies (measured in last 100000 iterations):
+Detail  :  Chain : Scale factor    Efficiency
+Detail  :      0 :       0.02183        18.2 %
+Detail  :      1 :       0.01455        22.1 %
+Detail  :      2 :       0.01455        22.3 %
+Detail  :      3 :       0.01455        22.2 %
+Summary : Exiting
+ sqrt(Variance):         +0.920935 +- 0.00439279
+Summary :       Median +- central 68% interval: +0.920893 + 0.00446455 - 0.00435337
+Summary :       (Marginalized) mode:            +0.922
+Summary :        5% quantile:                   +0.913785
+Summary :       10% quantile:                   +0.915304
+Summary :       16% quantile:                   +0.916539
+Summary :       84% quantile:                   +0.925357
+Summary :       90% quantile:                   +0.926595
+Summary :       95% quantile:                   +0.928208
+Summary :       Smallest interval containing 72.3% and local mode:
+Summary :       (0.916, 0.9256) (local mode at 0.922 with rel. height 1; rel. area 1)
+Summary : 
+Summary :   (1) Parameter "s" :
+Summary :       Mean +- sqrt(Variance):         -1.53136 +- 0.00790635
+Summary :       Median +- central 68% interval: -1.53128 + 0.00793572 - 0.0080048
+Summary :       (Marginalized) mode:            -1.5315
+Summary :        5% quantile:                   -1.54459
+Summary :       10% quantile:                   -1.54168
+Summary :       16% quantile:                   -1.53929
+Summary :       84% quantile:                   -1.52335
+Summary :       90% quantile:                   -1.52121
+Summary :       95% quantile:                   -1.5184
+Summary :       Smallest interval containing 73.9% and local mode:
+Summary :       (-1.539, -1.521) (local mode at -1.5315 with rel. height 1; rel. area 1)
+Summary : 
+Summary :   (2) Parameter "b" :
+Summary :       Mean +- sqrt(Variance):         +50709.1 +- 349.802
+Summary :       Median +- central 68% interval: +50713 + 345.103 - 356.803
+Summary :       (Marginalized) mode:            +50750
+Summary :        5% quantile:                   +50125.6
+Summary :       10% quantile:                   +50253.3
+Summary :       16% quantile:                   +50356.2
+Summary :       84% quantile:                   +51058.1
+Summary :       90% quantile:                   +51159.2
+Summary :       95% quantile:                   +51286.3
+Summary :       Smallest interval containing 68.1% and local mode:
+Summary :       (50400, 51100) (local mode at 50750 with rel. height 1; rel. area 1)
+Summary : 
+Summary :   (3) Observable "T" :
+Summary :       Mean +- sqrt(Variance):         +7.48213e+15 +- 1.47181e+13
+Summary :       Median +- central 68% interval: +7.48263e+15 + 1.52775e+13 - 1.76667e+13
+Summary :       (Marginalized) mode:            +7.49e+15
+Summary :        5% quantile:                   +7.45475e+15
+Summary :       10% quantile:                   +7.46176e+15
+Summary :       16% quantile:                   +7.46496e+15
+Summary :       84% quantile:                   +7.49791e+15
+Summary :       90% quantile:                   +7.50247e+15
+Summary :       95% quantile:                   +7.51169e+Detail  :  --> iteration number  70000 ( 70 %)
+Detail  :  --> iteration number  80000 ( 80 %)
+Detail  :  --> iteration number  90000 ( 90 %)
+Detail  :  --> iteration number 100000 (100 %)
+Summary :  --> Markov chains ran for 100000 iterations.
+Detail  :  --> Efficiencies (measured in 100000 iterations):
+Detail  :        - Chain : Efficiency
+Detail  :              0 :     46.0 %
+Detail  :              1 :     48.3 %
+Detail  :              2 :     45.3 %
+Detail  :              3 :     38.2 %
+Detail  :  --> Global mode from MCMC:
+Detail  :           ga :    0.578557
+Detail  :           s  :    0.0363238
+Detail  :           b  :    49732.9
+Summary : Printing knowledge update plots (4 x 1D + 6 x 2D = 10) into file output/ibfm2_pos_update.pdf
+Summary : 
+Summary :  -----------------------------------------------------
+Summary :  Summary
+Summary :  -----------------------------------------------------
+Summary : 
+Summary :  Model summary
+Summary :  =============
+Summary :  Model: ibfm2_pos
+Summary :  Number of parameters: 3
+Summary : 
+Summary :  List of parameters and ranges:
+Summary :  0) ga : [0.5, 1.3]
+Summary :  1) s  : [0, 3]
+Summary :  2) b  : [0, 100000]
+Summary : 
+Summary :  List of observables and ranges:
+Summary :  0) T : [0, 2e+16]
+Summary : 
+Summary : 
+Summary :  Results of the optimization
+Summary :  ===========================
+Summary :  Optimization algorithm used: Minuit
+Summary :  Best Fit Results
+Summary :  ===========================
+Summary :  Log of the maximum posterior: -4014.085729
+Summary : 
+Summary :  Global mode:
+Summary :  0)  Parameter "ga" : 1.18675 +- 0.00469433
+Summary :  1)  Parameter "s"  : 1.53856 +- 0.00951952
+Summary :  2)  Parameter "b"  : 49777.8 +- 343.675
+Summary : 
+Summary :  Marginalization algorithm used: Metropolis
+Summary : 
+Summary :  Results of the marginalization
+Summary :  ==============================
+Summary :  List of variables and properties of the marginalized distributions:
+Summary : 
+Summary :   (0) Parameter "ga" :
+Summary :       Mean +- sqrt(Variance):         +1.18673 +- 0.0046327
+Summary :       Median +- central 68% interval: +1.18671 + 0.00466409 - 0.00456632
+Summary :       (Marginalized) mode:            +1.186
+Summary :        5% quantile:                   +1.17915
+Summary :       10% quantile:                   +1.18084
+Summary :       16% quantile:                   +1.18214
+Summary :       84% quantile:                   +1.19137
+Summary :       90% quantile:                   +1.19271
+Summary :       95% quantile:                   +1.19433
+Summary :       Smallest interval containing 69.9% and local mode:
+Summary :       (1.1816, 1.1912) (local mode at 1.186 with rel. height 1; rel. area 1)
+Summary : 
+Summary :   (1) Parameter "s" :
+Summary :       Mean +- sqrt(Variance):         +1.53861 +- 0.00935338
+Summary :       Median +- central 68% interval: +1.53862 + 0.00930729 - 0.00949911
+Summary :       (Marginalized) mode:            +1.5405
+Summary :        5% quantile:                   +1.52309
+Summary :       10% quantile:                   +1.52645
+Summary :       16% quantile:                   +1.52912
+Summary :       84% quantile:                   +1.54792
+Summary :       90% quantile:                   +1.55068
+Summary :       95% quantile:                   +1.55396
+Summary :       Smallest interval containing 73.3% and local mode:
+Summary :       (1.527, 1.548) (local mode at 1.5405 with rel. height 1; rel. area 1)
+Summary : 
+Summary :   (2) Parameter "b" :
+Summary :       Mean +- sqrt(Variance):         +49780.4 +- 339.263
+Summary :       Median +- central 68% interval: +49776.2 + 345.125 - 335.666
+Summary :       (Marginalized) mode:            +49750
+Summary :        5% quantile:                   +49223
+Summary :       10% quantile:                   +49343.2
+Summary :       16% quantile:                   +49440.6
+Summary :       84% quantile:                   +50121.4
+Summary :       90% quantile:                   +50220.3
+Summary :       95% quantile:                   +50348.2
+Summary :       Smallest interval containing 69.6% and local mode:
+Summary :       (49400, 50100) (local mode at 49750 with rel. height 1; rel. area 1)
+Summary : 
+Summary :   (3) Observable "T" :
+Summary :       Mean +- sqrt(Variance):         +7.44979e+15 +- 1.46077e+13
+Summary :       Median +- central 68% interval: +7.44986e+15 + 1.7501e+13 - 1.76792e+13
+Summary :       (Marginalized) mode:            +7.45e+15
+Summary :        5% quantile:                   +7.4225e+15
+Summary :       10% quantile:                   +7.4269e+15
+Summary :       16% quantile:                   +7.43218e+15
+Summary :       84% quantile:                   +7.46736e+15
+Summary :       90% quantile:                   +7.47276e+15
+Summary :       95% quantile:                   +7.47727e+15
+Summary :       Smallest interval containing 73.7% and local mode:
+Summary :       (7.42e+15, 7.46e+15) (local mode at 7.45e+15 with rel. height 1; rel. area 1)
+Summary : 
+Summary :  Status of the MCMC
+Summary :  ==================
+Summary :  Convergence reached:                    yes
+Summary :  Number of iterations until convergence: 6000
+Summary :  Number of chains:                       4
+Summary :  Number of iterations per chain:         100000
+Detail  :  Scale factors and efficiencies (measured in last 100000 iterations):
+Detail  :  Chain : Scale factor    Efficiency
+Detail  :      0 :       0.02183        21.6 %
+Detail  :      1 :       0.02183        21.9 %
+Detail  :      2 :       0.02183        21.6 %
+Detail  :      3 :       0.03274        17.8 %
+Summary : Exiting
