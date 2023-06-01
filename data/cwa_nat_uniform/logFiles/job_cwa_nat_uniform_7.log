@@ -1,0 +1,209 @@
+****************************************************************
+*                      SLURM Batch System                      *
+*           IN2P3 Computing Centre, Villeurbanne FR            *
+****************************************************************
+* Date:                 Sun Sep 18 07:16:05 CEST 2022
+* Job name:             cwa_nat_uniform_7
+* Job id:               14577284
+* User:                 ploaiza
+* Account:              cupidmo
+* Submit host:          cca002
+* Partition:            htc
+* Quality of service:   normal
+* Nodelist:             ccwslurm0078
+****************************************************************
+Start of job 7 ################
+rm -rf /sps/cupidmo/loaiza/CROSS_simus_Mykola_2/geant4-simulation/work/cwa_nat_uniform/tmp7/
+
+**************************************************************
+ Geant4 version Name: geant4-10-05-patch-01    (17-April-2019)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+ASCIITree (ATree)
+DAWNFILE (DAWNFILE)
+G4HepRep (HepRepXML)
+G4HepRepFile (HepRepFile)
+RayTracer (RayTracer)
+VRML1FILE (VRML1FILE)
+VRML2FILE (VRML2FILE)
+gMocrenFile (gMocrenFile)
+OpenGLImmediateQt (OGLIQt, OGLI)
+OpenGLStoredQt (OGLSQt, OGL, OGLS)
+OpenGLImmediateXm (OGLIXm, OGLIQt_FALLBACK)
+OpenGLStoredXm (OGLSXm, OGLSQt_FALLBACK)
+OpenGLImmediateX (OGLIX, OGLIQt_FALLBACK, OGLIXm_FALLBACK)
+OpenGLStoredX (OGLSX, OGLSQt_FALLBACK, OGLSXm_FALLBACK)
+RayTracerX (RayTracerX)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByAttribute
+  drawByCharge
+  drawByOriginVolume
+  drawByParticleID
+  drawByEncounteredVolume
+
+Registered filter factories:
+  attributeFilter
+  chargeFilter
+  originVolumeFilter
+  particleFilter
+  encounteredVolumeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+"/vis/list" to see available colours.
+G4GDML: Reading '/sps/cupidmo/loaiza/CROSS_simus_Mykola/geometry/setup-gA.xml'...
+G4GDML: VALIDATION ERROR! attribute 'aunit' is not declared for element 'rotation' at line: 23
+G4GDML: VALIDATION ERROR! ID value 'C12' is not unique at line: 263
+G4GDML: VALIDATION ERROR! ID value 'C13' is not unique at line: 266
+G4GDML: VALIDATION ERROR! ID value 'N14' is not unique at line: 273
+G4GDML: VALIDATION ERROR! ID value 'N15' is not unique at line: 276
+G4GDML: VALIDATION ERROR! ID value 'O16' is not unique at line: 283
+G4GDML: VALIDATION ERROR! ID value 'O17' is not unique at line: 286
+G4GDML: VALIDATION ERROR! ID value 'O18' is not unique at line: 289
+G4GDML: VALIDATION ERROR! value 'ilshield[hole_number+1]' is invalid NCName at line: 50
+G4GDML: VALIDATION ERROR! value 'ilshield[hole_number]' is invalid NCName at line: 51
+G4GDML: VALIDATION ERROR! missing required attribute 'name' at line: 54
+G4GDML: VALIDATION ERROR! ID value 'World' is not unique at line: 142
+G4GDML: VALIDATION ERROR! ID value 'shield1_tube' is not unique at line: 158
+G4GDML: VALIDATION ERROR! ID value 'shield1_top' is not unique at line: 161
+G4GDML: VALIDATION ERROR! ID value 'shield1_bottom' is not unique at line: 165
+G4GDML: VALIDATION ERROR! ID value 'elshield_bottom' is not unique at line: 177
+G4GDML: VALIDATION ERROR! ID value 'shield2_tube' is not unique at line: 181
+G4GDML: VALIDATION ERROR! ID value 'shield2_bottom' is not unique at line: 185
+G4GDML: VALIDATION ERROR! ID value 'shield3_tube' is not unique at line: 189
+G4GDML: VALIDATION ERROR! ID value 'shield3_bottom' is not unique at line: 193
+G4GDML: VALIDATION ERROR! ID value 'shield4_tube' is not unique at line: 197
+G4GDML: VALIDATION ERROR! ID value 'shield4_bottom' is not unique at line: 201
+G4GDML: VALIDATION ERROR! ID value 'shield5_tube' is not unique at line: 205
+G4GDML: VALIDATION ERROR! ID value 'shield5_bottom' is not unique at line: 209
+G4GDML: VALIDATION ERROR! missing required attribute 'name' at line: 219
+G4GDML: VALIDATION ERROR! attribute 'aunit' is not declared for element 'rotation' at line: 220
+G4GDML: VALIDATION ERROR! missing required attribute 'name' at line: 220
+G4GDML: VALIDATION ERROR! missing required attribute 'name' at line: 229
+G4GDML: VALIDATION ERROR! attribute 'aunit' is not declared for element 'rotation' at line: 230
+G4GDML: VALIDATION ERROR! missing required attribute 'name' at line: 230
+G4GDML: VALIDATION ERROR! missing required attribute 'name' at line: 239
+G4GDML: VALIDATION ERROR! attribute 'aunit' is not declared for element 'rotation' at line: 240
+G4GDML: VALIDATION ERROR! missing required attribute 'name' at line: 240
+G4GDML: VALIDATION ERROR! ID attribute 'ilshield_15' is referenced but was never declared at line: 251
+G4GDML: VALIDATION ERROR! ID attribute 'pi' is referenced but was never declared at line: 251
+G4GDML: Reading definitions...
+G4GDML: Reading materials...
+G4GDML: Reading solids...
+G4GDML: Reading solids...
+G4GDML: Reading solids...
+G4GDML: Reading solids...
+G4GDML: Reading solids...
+G4GDML: Reading solids...
+G4GDML: Reading solids...
+G4GDML: Reading solids...
+G4GDML: Reading solids...
+G4GDML: Reading solids...
+G4GDML: Reading solids...
+G4GDML: Reading solids...
+G4GDML: Reading solids...
+G4GDML: Reading solids...
+G4GDML: Reading solids...
+G4GDML: Reading solids...
+G4GDML: Reading structure...
+G4GDML: Reading module 'geometry/run2/towers/tower1.xml'...
+G4GDML: VALIDATION ERROR! ID value 'tower1' is not unique at line: 270
+G4GDML: VALIDATION ERROR! ID attribute 'G4_Li' is referenced but was never declared at line: 286
+G4GDML: VALIDATION ERROR! ID attribute 'G4_Mo' is referenced but was never declared at line: 286
+G4GDML: VALIDATION ERROR! ID attribute 'G4_O' is referenced but was never declared at line: 286
+G4GDML: VALIDATION ERROR! ID attribute 'G4_W' is referenced but was never declared at line: 286
+G4GDML: VALIDATION ERROR! ID attribute 'G4_Cd' is referenced but was never declared at line: 286
+G4GDML: VALIDATION ERROR! ID attribute 'G4_Galactic' is referenced but was never declared at line: 286
+G4GDML: Reading definitions...
+G4GDML: Reading materials...
+G4GDML: Reading solids...
+G4GDML: Reading structure...
+G4GDML: Reading setup...
+G4GDML: Reading module 'geometry/run2/towers/tower1.xml' done!
+G4GDML: Reading module 'geometry/run2/towers/tower2.xml'...
+G4GDML: VALIDATION ERROR! attribute 'deltaphi' is not declared for element 'box' at line: 170
+G4GDML: VALIDATION ERROR! attribute 'deltaphi' is not declared for element 'box' at line: 172
+G4GDML: VALIDATION ERROR! ID value 'lmo_enr' is not unique at line: 278
+G4GDML: VALIDATION ERROR! ID value 'lmo_depl' is not unique at line: 283
+G4GDML: VALIDATION ERROR! ID value 'tower2' is not unique at line: 360
+G4GDML: VALIDATION ERROR! ID value 'tower2' is not unique at line: 372
+G4GDML: VALIDATION ERROR! ID attribute 'G4_Li' is referenced but was never declared at line: 376
+G4GDML: VALIDATION ERROR! ID attribute 'G4_Mo' is referenced but was never declared at line: 376
+G4GDML: VALIDATION ERROR! ID attribute 'G4_O' is referenced but was never declared at line: 376
+G4GDML: VALIDATION ERROR! ID attribute 'World' is referenced but was never declared at line: 376
+G4GDML: VALIDATION ERROR! ID attribute 'G4_Galactic' is referenced but was never declared at line: 376
+G4GDML: Reading definitions...
+G4GDML: Reading materials...
+G4Material WARNING: duplicate name of material copper
+G4Material WARNING: duplicate name of material lmo
+G4GDML: Reading solids...
+G4GDML: Reading structure...
+G4GDML: Reading setup...
+G4GDML: Reading module 'geometry/run2/towers/tower2.xml' done!
+G4GDML: Reading setup...
+G4GDML: Reading '/sps/cupidmo/loaiza/CROSS_simus_Mykola/geometry/setup-gA.xml' done!
+Stripping off GDML names of materials, solids and volumes ...
+
+### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+### ===  Auger cascade flag: 1
+### ===  Ignore cuts flag:   0
+Set file name: /sps/cupidmo/loaiza/CROSS_simus_Mykola_2/geant4-simulation/work/cwa_nat_uniform_7.root
+
+--------- Ranecu engine status ---------
+ Initial seed (index) = 60
+ Current couple of seeds = 473871999, 342011564
+----------------------------------------
+=======================================================================
+======       Radioactive Decay Physics Parameters              ========
+=======================================================================
+Max life time                                     1.4427e+06 ps
+Internal e- conversion flag                       1
+Stored internal conversion coefficients           1
+Enable correlated gamma emission                  0
+Max 2J for sampling of angular correlations       10
+Atomic de-excitation enabled                      1
+Auger electron emission enabled                   1
+Auger cascade enabled                             1
+Check EM cuts disabled for atomic de-excitation   1
+Use Bearden atomic level energies                 0
+=======================================================================
+--> Event 0 starts.
+--> Event 1000000 starts.
+--> Event 2000000 starts.
+--> Event 3000000 starts.
+--> Event 4000000 starts.
+--> Event 5000000 starts.
+--> Event 6000000 starts.
+--> Event 7000000 starts.
+--> Event 8000000 starts.
+--> Event 9000000 starts.
+Graphics systems deleted.
+Visualization Manager deleting...
+... Saving output files ... #####################################
+Moving files ...
+mv job_cwa_nat_uniform_7.log /sps/cupidmo/loaiza/CROSS_simus_Mykola_2/geant4-simulation/work/cwa_nat_uniform/logFiles/cwa_nat_uniform_7.log
+mv cwa_nat_uniform_7.root  /sps/cupidmo/loaiza/CROSS_simus_Mykola_2/geant4-simulation/work/cwa_nat_uniform/rootFiles/.
+mv cwa_nat_uniform_7.root.log  /sps/cupidmo/loaiza/CROSS_simus_Mykola_2/geant4-simulation/work/cwa_nat_uniform/logFiles/.
+--> done !
+ 
+Donemore SdEdepTotal.cpp

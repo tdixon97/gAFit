@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<simulation>
+
+  <!--Please dont change the file.-->
+
+  <time dateTimeFormat="dd.mm.yyyy hh:mm:ss">
+    <startTime>18.9.2022 7:16:11</startTime>
+    <endTime>18.9.2022 7:19:28</endTime>
+    <duration unit="sec">197</duration>
+  </time>
+
+  <eventsGenerated>10000000</eventsGenerated>
+
+  <gdmlFile>geometry/main.gdml</gdmlFile>
+
+  <dataFile>/sps/cupidmo/loaiza/CROSS_simus_Mykola_2/geant4-simulation/work/cwa_nat_uniform_0.root.root</dataFile>
+
+  <source>
+    <type>TableUniform</type>
+    <particle>e-</particle>
+    <energyMin unit="keV">0</energyMin>
+    <energyMax unit="keV">370</energyMax>
+  </source>
+
+  <point>
+    <type>Material</type>
+    <material density="7.62548" unit="g/cm3">cwo_nat</material>
+    <totalMass unit="g">432.906</totalMass>
+  </point>
+
+  <detectors>
+    <detector name="crystal_cwo_ern">
+      <type>11SdEdepTotal</type>
+      <material density="7.84197" unit="g/cm3">cwo_116_enr</material>
+      <mass unit="g">582.448</mass>
+    </detector>
+    <detector name="crystal_cwo_nat">
+      <type>11SdEdepTotal</type>
+      <material density="7.62548" unit="g/cm3">cwo_nat</material>
+      <mass unit="g">432.906</mass>
+    </detector>
+    <detector name="crystal_lmo_clymene">
+      <type>11SdEdepTotal</type>
+      <material density="3.14872" unit="g/cm3">lmo</material>
+      <mass unit="g">256.4</mass>
+    </detector>
+    <detector name="lmo_enr">
+      <type>11SdEdepTotal</type>
+      <material density="3.07" unit="g/cm3">lmo_enr</material>
+      <mass unit="g">279.754</mass>
+    </detector>
+    <detector name="lmo_depl">
+      <type>11SdEdepTotal</type>
+      <material density="3.0306" unit="g/cm3">lmo_depl</material>
+      <mass unit="g">276.164</mass>
+    </detector>
+    <detector name="lmo_nat">
+      <type>11SdEdepTotal</type>
+      <material density="3.14872" unit="g/cm3">lmo</material>
+      <mass unit="g">256.4</mass>
+    </detector>
+  </detectors>
+
+</simulation>

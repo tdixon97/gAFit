@@ -886,3 +886,344 @@ Detail  :  --> iteration number 200000 ( 20 %)
 Detail  :  --> iteration number 300000 ( 30 %)
 Detail  :  --> iteration number 400000 ( 40 %)
 Detail  :  --> iteration number 500000 ( 50 %)
+Detail  :  --> iteration number 600000 ( 60 %)
+Detail  :  --> iteration number 700000 ( 70 %)
+Detail  :  --> iteration number 800000 ( 80 %)
+Detail  :  --> iteration number 900000 ( 90 %)
+Detail  :  --> iteration number 1000000 (100 %)
+Summary :  --> Markov chains ran for 1000000 iterations.
+Detail  :  --> Efficiencies (measured in 1000000 iterations):
+Detail  :        - Chain : Efficiency
+Detail  :              0 :     27.2 %
+Detail  :              1 :     23.3 %
+Detail  :              2 :     24.3 %
+Detail  :              3 :     29.7 %
+Detail  :  --> Global mode from MCMC:
+Detail  :           ga     :    1.0034
+Detail  :           s      :    1.619
+Detail  :           b      :    4.934e+04
+Detail  :           eff_p0 :    0.064308
+Detail  :           eff_p1 :    7.471
+Detail  :           eff_p2 :    0.2262
+Summary : Finding mode using Minuit
+Summary : Printing all marginalized distributions (7 x 1D + 21 x 2D = 28) into file output/test_fit_plots.pdf
+Summary : Marginalizing prior...
+Summary : Marginalize using Metropolis
+Summary : Pre-run Metropolis MCMC for model "test_fit_prior" ...
+Summary :  --> Perform MCMC pre-run with 4 chains, each with maximum 1000000 iterations
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 1000 iterations. Efficiency of 
+Detail  :          chain 0 is above 35 % (40 %). Scale increased to 1.416
+Detail  :          chain 1 is above 35 % (88 %). Scale increased to 1.416
+Detail  :          chain 2 is above 35 % (51 %). Scale increased to 1.416
+Detail  :          chain 3 is above 35 % (51 %). Scale increased to 1.416
+Detail  :      * Convergence status: Set of 4 Markov chains did not converge after 1000 iterations.
+Detail  :        - Parameter :  R-Value
+Detail  :          ga     :  1.730 <-- Greater than threshold
+Detail  :          s      :  1.661 <-- Greater than threshold
+Detail  :          b      :  1.447 <-- Greater than threshold
+Detail  :          eff_p0 :  1.269 <-- Greater than threshold
+Detail  :          eff_p1 :  1.110 <-- Greater than threshold
+Detail  :          eff_p2 :  1.436 <-- Greater than threshold
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 2000 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (1 %). Scale decreased to 0.9441
+Detail  :          chain 1 is below 15 % (0.6 %). Scale decreased to 0.9441
+Detail  :          chain 2 is below 15 % (0.7 %). Scale decreased to 0.9441
+Detail  :          chain 3 is below 15 % (0.6 %). Scale decreased to 0.9441
+Detail  :      * Convergence status: Set of 4 Markov chains did not converge after 2000 iterations.
+Detail  :        - Parameter :  R-Value
+Detail  :          ga     :  1.380 <-- Greater than threshold
+Detail  :          s      :  1.639 <-- Greater than threshold
+Detail  :          b      :  1.576 <-- Greater than threshold
+Detail  :          eff_p0 :  1.321 <-- Greater than threshold
+Detail  :          eff_p1 :  1.245 <-- Greater than threshold
+Detail  :          eff_p2 :  1.462 <-- Greater than threshold
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 3000 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (5 %). Scale decreased to 0.6294
+Detail  :          chain 1 is below 15 % (0.3 %). Scale decreased to 0.6294
+Detail  :          chain 2 is below 15 % (3 %). Scale decreased to 0.6294
+Detail  :          chain 3 is below 15 % (5 %). Scale decreased to 0.6294
+Detail  :      * Convergence status: Set of 4 Markov chains did not converge after 3000 iterations.
+Detail  :        - Parameter :  R-Value
+Detail  :          ga     :  1.347 <-- Greater than threshold
+Detail  :          s      :  1.571 <-- Greater than threshold
+Detail  :          b      :  1.542 <-- Greater than threshold
+Detail  :          eff_p0 :  1.164 <-- Greater than threshold
+Detail  :          eff_p1 :  1.146 <-- Greater than threshold
+Detail  :          eff_p2 :  1.229 <-- Greater than threshold
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 4000 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (6 %). Scale decreased to 0.4196
+Detail  :          chain 1 is below 15 % (3 %). Scale decreased to 0.4196
+Detail  :          chain 2 is below 15 % (3 %). Scale decreased to 0.4196
+Detail  :          chain 3 is below 15 % (8 %). Scale decreased to 0.4196
+Detail  :      * Convergence status: Set of 4 Markov chains did not converge after 4000 iterations.
+Detail  :        - Parameter :  R-Value
+Detail  :          ga     :  1.404 <-- Greater than threshold
+Detail  :          s      :  1.426 <-- Greater than threshold
+Detail  :          b      :  1.478 <-- Greater than threshold
+Detail  :          eff_p0 :  1.136 <-- Greater than threshold
+Detail  :          eff_p1 :  1.125 <-- Greater than threshold
+Detail  :          eff_p2 :  1.181 <-- Greater than threshold
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 5000 iterations. Efficiency of 
+Detail  :          chain 0 is below 15 % (14 %). Scale decreased to 0.2797
+Detail  :          chain 1 is below 15 % (8 %). Scale decreased to 0.2797
+Detail  :          chain 2 is below 15 % (4 %). Scale decreased to 0.2797
+Detail  :          chain 3 is below 15 % (12 %). Scale decreased to 0.2797
+Detail  :      * Convergence status: Set of 4 Markov chains did not converge after 5000 iterations.
+Detail  :        - Parameter :  R-Value
+Detail  :          ga     :  1.371 <-- Greater than threshold
+Detail  :          s      :  1.264 <-- Greater than threshold
+Detail  :          b      :  1.272 <-- Greater than threshold
+Detail  :          eff_p0 :  1.091
+Detail  :          eff_p1 :  1.077
+Detail  :          eff_p2 :  1.114 <-- Greater than threshold
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 6000 iterations. Efficiency of 
+Detail  :          chain 1 is below 15 % (12 %). Scale decreased to 0.1865
+Detail  :          chain 2 is below 15 % (12 %). Scale decreased to 0.1865
+Detail  :          chain 3 is below 15 % (14 %). Scale decreased to 0.1865
+Detail  :      * Convergence status: Set of 4 Markov chains did not converge after 6000 iterations.
+Detail  :        - Parameter :  R-Value
+Detail  :          ga     :  1.219 <-- Greater than threshold
+Detail  :          s      :  1.170 <-- Greater than threshold
+Detail  :          b      :  1.236 <-- Greater than threshold
+Detail  :          eff_p0 :  1.043
+Detail  :          eff_p1 :  1.033
+Detail  :          eff_p2 :  1.052
+Detail  :      * Efficiency status: Efficiencies not within predefined range after 7000 iterations. Efficiency of 
+Detail  :          chain 1 is below 15 % (11 %). Scale decreased to 0.1243
+Detail  :      * Convergence status: Set of 4 Markov chains did not converge after 7000 iterations.
+Detail  :        - Parameter :  R-Value
+Detail  :          ga     :  1.121 <-- Greater than threshold
+Detail  :          s      :  1.129 <-- Greater than threshold
+Detail  :          b      :  1.140 <-- Greater than threshold
+Detail  :          eff_p0 :  1.037
+Detail  :          eff_p1 :  1.025
+Detail  :          eff_p2 :  1.042
+Detail  :      * Convergence status: Set of 4 Markov chains did not converge after 8000 iterations.
+Detail  :        - Parameter :  R-Value
+Detail  :          ga     :  1.087
+Detail  :          s      :  1.084
+Detail  :          b      :  1.111 <-- Greater than threshold
+Detail  :          eff_p0 :  1.029
+Detail  :          eff_p1 :  1.021
+Detail  :          eff_p2 :  1.032
+Detail  :      * Convergence status: Set of 4 Markov chains did not converge after 9000 iterations.
+Detail  :        - Parameter :  R-Value
+Detail  :          ga     :  1.053
+Detail  :          s      :  1.078
+Detail  :          b      :  1.125 <-- Greater than threshold
+Detail  :          eff_p0 :  1.024
+Detail  :          eff_p1 :  1.017
+Detail  :          eff_p2 :  1.026
+Detail  :      * Convergence status: Set of 4 Markov chains did not converge after 10000 iterations.
+Detail  :        - Parameter :  R-Value
+Detail  :          ga     :  1.041
+Detail  :          s      :  1.070
+Detail  :          b      :  1.104 <-- Greater than threshold
+Detail  :          eff_p0 :  1.019
+Detail  :          eff_p1 :  1.014
+Detail  :          eff_p2 :  1.021
+Summary :  --> Set of 4 Markov chains converged within 11000 iterations, and all scales are adjusted.
+Summary :  --> 10 updates to multivariate proposal function's covariances were made.
+Detail  :  --> Scale factors and efficiencies (measured in last 1000 iterations):
+Detail  :        - Chain : Scale factor    Efficiency
+Detail  :              0 :        0.2797        28.0 %
+Detail  :              1 :        0.1243        20.8 %
+Detail  :              2 :        0.1865        23.7 %
+Detail  :              3 :        0.1865        32.8 %
+Summary : Run Metropolis MCMC for model "test_fit_prior" ...
+Summary :  --> Perform MCMC run with 4 chains, each with 1000000 iterations.
+Detail  :  --> iteration number 100000 ( 10 %)
+Detail  :  --> iteration number 200000 ( 20 %)
+Detail  :  --> iteration number 300000 ( 30 %)
+Detail  :  --> iteration number 400000 ( 40 %)
+Detail  :  --> iteration number 500000 ( 50 %)
+Detail  :  --> iteration number 600000 ( 60 %)
+Detail  :  --> iteration number 700000 ( 70 %)
+Detail  :  --> iteration number 800000 ( 80 %)
+Detail  :  --> iteration number 900000 ( 90 %)
+Detail  :  --> iteration number 1000000 (100 %)
+Summary :  --> Markov chains ran for 1000000 iterations.
+Detail  :  --> Efficiencies (measured in 1000000 iterations):
+Detail  :        - Chain : Efficiency
+Detail  :              0 :     31.5 %
+Detail  :              1 :     24.1 %
+Detail  :              2 :     27.3 %
+Detail  :              3 :     31.4 %
+Detail  :  --> Global mode from MCMC:
+Detail  :           ga     :    0.935751
+Detail  :           s      :    2.06623
+Detail  :           b      :    57608.5
+Detail  :           eff_p0 :    0.08768
+Detail  :           eff_p1 :    39.08
+Detail  :           eff_p2 :    0.086871
+Summary : Printing knowledge update plots (7 x 1D + 21 x 2D = 28) into file output/test_fit_update.pdf
+Summary : 
+Summary :  -----------------------------------------------------
+Summary :  Summary
+Summary :  -----------------------------------------------------
+Summary : 
+Summary :  Model summary
+Summary :  =============
+Summary :  Model: test_fit
+Summary :  Number of parameters: 6
+Summary : 
+Summary :  List of parameters and ranges:
+Summary :  0) ga     : [0.5, 1.3]
+Summary :  1) s      : [0, 3]
+Summary :  2) b      : [0, 100000]
+Summary :  3) eff_p0 : [0.058362, 0.11722]
+Summary :  4) eff_p1 : [0, 92.261]
+Summary :  5) eff_p2 : [0, 0.41862]
+Summary : 
+Summary :  List of observables and ranges:
+Summary :  0) T : [0, 2e+16]
+Summary : 
+Summary : 
+Summary :  Results of the optimization
+Summary :  ===========================
+Summary :  Optimization algorithm used: Minuit
+Summary :  Best Fit Results
+Summary :  ===========================
+Summary :  Log of the maximum posterior: -4061.874986
+Summary : 
+Summary :  Global mode:
+Summary :  0)  Parameter "ga"     : 1.00342 +- 0.251026
+Summary :  1)  Parameter "s"      : 1.6197 +- 0.972062
+Summary :  2)  Parameter "b"      : 49335.2 +- 32480.3
+Summary :  3)  Parameter "eff_p0" : 0.064259 +- 0.012065
+Summary :  4)  Parameter "eff_p1" : 7.3864 +- 16.266
+Summary :  5)  Parameter "eff_p2" : 0.22605 +- 0.13554
+Summary : 
+Summary :  Marginalization algorithm used: Metropolis
+Summary : 
+Summary :  Results of the marginalization
+Summary :  ==============================
+Summary :  List of variables and properties of the marginalized distributions:
+Summary : 
+Summary :   (0) Parameter "ga" :
+Summary :       Mean +- sqrt(Variance):         +1.00403 +- 0.0029196
+Summary :       Median +- central 68% interval: +1.00411 + 0.00276098 - 0.00293623
+Summary :       (Marginalized) mode:            +1.0044
+Summary :        5% quantile:                   +0.999037
+Summary :       10% quantile:                   +1.00026
+Summary :       16% quantile:                   +1.00118
+Summary :       84% quantile:                   +1.00687
+Summary :       90% quantile:                   +1.00768
+Summary :       95% quantile:                   +1.00872
+Summary :       Smallest interval containing 73.9% and local mode:
+Summary :       (1.0008, 1.0072) (local mode at 1.0044 with rel. height 1; rel. area 1)
+Summary : 
+Summary :   (1) Parameter "s" :
+Summary :       Mean +- sqrt(Variance):         +1.61491 +- 0.0146554
+Summary :       Median +- central 68% interval: +1.61523 + 0.0136213 - 0.0147286
+Summary :       (Marginalized) mode:            +1.6155
+Summary :        5% quantile:                   +1.59008
+Summary :       10% quantile:                   +1.5959
+Summary :       16% quantile:                   +1.6005
+Summary :       84% quantile:                   +1.62885
+Summary :       90% quantile:                   +1.6329
+Summary :       95% quantile:                   +1.6383
+Summary :       Smallest interval containing 70.7% and local mode:
+Summary :       (1.602, 1.632) (local mode at 1.6155 with rel. height 1; rel. area 1)
+Summary : 
+Summary :   (2) Parameter "b" :
+Summary :       Mean +- sqrt(Variance):         +49308.5 +- 338.205
+Summary :       Median +- central 68% interval: +49305.7 + 345.188 - 337.684
+Summary :       (Marginalized) mode:            +49350
+Summary :        5% quantile:                   +48750.5
+Summary :       10% quantile:                   +48874.8
+Summary :       16% quantile:                   +48968
+Summary :       84% quantile:                   +49650.9
+Summary :       90% quantile:                   +49750.1
+Summary :       95% quantile:                   +49875.1
+Summary :       Smallest interval containing 69.2% and local mode:
+Summary :       (49000, 49700) (local mode at 49350 with rel. height 1; rel. area 1)
+Summary : 
+Summary :   (3) Parameter "eff_p0" :
+Summary :       Mean +- sqrt(Variance):         +0.068834 +- 0.0031227
+Summary :       Median +- central 68% interval: +0.068958 + 0.0028744 - 0.0035981
+Summary :       (Marginalized) mode:            +0.070752
+Summary :        5% quantile:                   +0.06325
+Summary :       10% quantile:                   +0.064482
+Summary :       16% quantile:                   +0.06536
+Summary :       84% quantile:                   +0.071832
+Summary :       90% quantile:                   +0.0725
+Summary :       95% quantile:                   +0.07358
+Summary :       Smallest intervals containing 68.2% and local modes:
+Summary :       (0.064248, 0.064542) (local mode at 0.064277 with rel. height 0.44297; rel. area 0.038356)
+Summary :       (0.064836, 0.06513) (local mode at 0.064866 with rel. height 0.42391; rel. area 0.037157)
+Summary :       (0.066013, 0.066308) (local mode at 0.066043 with rel. height 0.41461; rel. area 0.036819)
+Summary :       (0.066602, 0.066661) (local mode at 0.066631 with rel. height 0.3202; rel. area 0.0066858)
+Summary :       (0.067191, 0.068839) (local mode at 0.067809 with rel. height 0.98511; rel. area 0.33634)
+Summary :       (0.068956, 0.069368) (local mode at 0.068986 with rel. height 0.51147; rel. area 0.060643)
+Summary :       (0.069545, 0.071134) (local mode at 0.070752 with rel. height 1; rel. area 0.32149)
+Summary :       (0.071311, 0.07237) (local mode at 0.071399 with rel. height 0.66631; rel. area 0.16251)
+Summary : 
+Summary :   (4) Parameter "eff_p1" :
+Summary :       Mean +- sqrt(Variance):         +12.126 +- 2.8552
+Summary :       Median +- central 68% interval: +12.083 + 2.9172 - 2.8621
+Summary :       (Marginalized) mode:            +10.195
+Summary :        5% quantile:                   +7.7157
+Summary :       10% quantile:                   +8.4162
+Summary :       16% quantile:                   +9.2211
+Summary :       84% quantile:                   +15
+Summary :       90% quantile:                   +15.678
+Summary :       95% quantile:                   +16.486
+Summary :       Smallest intervals containing 68.4% and local modes:
+Summary :       (7.3809, 7.5654) (local mode at 7.427 with rel. height 0.49629; rel. area 0.024397)
+Summary :       (8.3035, 8.5803) (local mode at 8.3496 with rel. height 0.53119; rel. area 0.039172)
+Summary :       (9.2261, 10.887) (local mode at 10.195 with rel. height 1; rel. area 0.33526)
+Summary :       (11.071, 11.533) (local mode at 11.117 with rel. height 0.71292; rel. area 0.074278)
+Summary :       (11.994, 12.64) (local mode at 12.04 with rel. height 0.74785; rel. area 0.10655)
+Summary :       (12.917, 13.378) (local mode at 12.963 with rel. height 0.67709; rel. area 0.073241)
+Summary :       (13.47, 13.747) (local mode at 13.516 with rel. height 0.49036; rel. area 0.036286)
+Summary :       (13.839, 15.315) (local mode at 14.808 with rel. height 0.95383; rel. area 0.2973)
+Summary :       (15.684, 15.777) (local mode at 15.731 with rel. height 0.52665; rel. area 0.013514)
+Summary : 
+Summary :   (5) Parameter "eff_p2" :
+Summary :       Mean +- sqrt(Variance):         +0.20217 +- 0.018031
+Summary :       Median +- central 68% interval: +0.20164 + 0.018713 - 0.016698
+Summary :       (Marginalized) mode:            +0.18859
+Summary :        5% quantile:                   +0.17603
+Summary :       10% quantile:                   +0.18141
+Summary :       16% quantile:                   +0.18494
+Summary :       84% quantile:                   +0.22035
+Summary :       90% quantile:                   +0.22799
+Summary :       95% quantile:                   +0.23403
+Summary :       Smallest intervals containing 68.4% and local modes:
+Summary :       (0.18001, 0.18294) (local mode at 0.18021 with rel. height 0.41602; rel. area 0.068315)
+Summary :       (0.18419, 0.18796) (local mode at 0.1844 with rel. height 0.83289; rel. area 0.12776)
+Summary :       (0.18838, 0.19214) (local mode at 0.18859 with rel. height 1; rel. area 0.17591)
+Summary :       (0.19256, 0.19424) (local mode at 0.19277 with rel. height 0.45061; rel. area 0.046573)
+Summary :       (0.19675, 0.19968) (local mode at 0.19696 with rel. height 0.59057; rel. area 0.089259)
+Summary :       (0.20094, 0.20428) (local mode at 0.20115 with rel. height 0.61392; rel. area 0.1114)
+Summary :       (0.20512, 0.21266) (local mode at 0.20952 with rel. height 0.71896; rel. area 0.23653)
+Summary :       (0.21349, 0.21559) (local mode at 0.2137 with rel. height 0.37196; rel. area 0.049346)
+Summary :       (0.21768, 0.22061) (local mode at 0.21789 with rel. height 0.48945; rel. area 0.07862)
+Summary :       (0.22605, 0.22689) (local mode at 0.22668 with rel. height 0.27815; rel. area 0.016293)
+Summary : 
+Summary :   (6) Observable "T" :
+Summary :       Mean +- sqrt(Variance):         +7.5322e+15 +- 5.80198e+13
+Summary :       Median +- central 68% interval: +7.53246e+15 + 5.96994e+13 - 6.09249e+13
+Summary :       (Marginalized) mode:            +7.53e+15
+Summary :        5% quantile:                   +7.43614e+15
+Summary :       10% quantile:                   +7.45517e+15
+Summary :       16% quantile:                   +7.47154e+15
+Summary :       84% quantile:                   +7.59216e+15
+Summary :       90% quantile:                   +7.60921e+15
+Summary :       95% quantile:                   +7.62935e+15
+Summary :       Smallest interval containing 75.8% and local mode:
+Summary :       (7.46e+15, 7.6e+15) (local mode at 7.53e+15 with rel. height 1; rel. area 1)
+Summary : 
+Summary :  Status of the MCMC
+Summary :  ==================
+Summary :  Convergence reached:                    yes
+Summary :  Number of iterations until convergence: 93000
+Summary :  Number of chains:                       4
+Summary :  Number of iterations per chain:         1000000
+Detail  :  Scale factors and efficiencies (measured in last 1000000 iterations):
+Detail  :  Chain : Scale factor    Efficiency
+Detail  :      0 :       0.0004259        27.2 %
+Detail  :      1 :       0.0009582        23.3 %
+Detail  :      2 :       0.0009582        24.3 %
+Detail  :      3 :       2.492e-05        29.7 %

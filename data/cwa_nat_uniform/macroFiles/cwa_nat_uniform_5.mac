@@ -1,0 +1,34 @@
+/persistency/gdml/read /sps/cupidmo/loaiza/CROSS_simus_Mykola/geometry/setup-gA.xml
+
+/run/setCutForAGivenParticle e- 1. um
+/run/setCutForAGivenParticle e+ 1. um
+/run/setCutForAGivenParticle gamma 10. um
+
+/run/initialize
+
+/control/verbose 0
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+
+
+/pga/source/setTableFlat e- 0 370
+/pga/point/setMaterial cwo_nat
+
+/detector/setEdepTotalByMaterial cwo_nat 0
+/detector/setEdepTotalByMaterial cwo_116_enr 0
+/detector/setEdepTotalByMaterial lmo 0
+/detector/setEdepTotalByMaterial lmo_enr 0
+/detector/setEdepTotalByMaterial lmo_depl 0
+
+/pga/store/primaryEnergy
+
+/analysis/store/defaults 0 False
+/analysis/store/defaults 5 False
+/analysis/setFileName /sps/cupidmo/loaiza/CROSS_simus_Mykola_2/geant4-simulation/work/cwa_nat_uniform_5.root
+
+
+/random/setDirectoryName /sps/cupidmo/cupid_mo_MC_files/OutFiles/CWO/CWO_Pb212/seedFiles
+/random/resetEngineFrom seed_5.rndm
+
+/run/beamOn 10000000
