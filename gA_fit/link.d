@@ -346,9 +346,10 @@ gA_fit.o: gA_fit.cxx gA_fit.h \
  /home/tdixon/root/include/Buttons.h \
  /home/tdixon/root/include/TAttCanvas.h \
  /home/tdixon/bat/bat-install/include/BAT/BCMath.h \
- /home/tdixon/root/include/TH2D.h /home/tdixon/root/include/TH2.h \
- /home/tdixon/root/include/TStyle.h /home/tdixon/root/include/TColor.h \
- /home/tdixon/root/include/TGraph.h
+ /home/tdixon/root/include/TH3D.h /home/tdixon/root/include/TH3.h \
+ /home/tdixon/root/include/TAtt3D.h /home/tdixon/root/include/TH2D.h \
+ /home/tdixon/root/include/TH2.h /home/tdixon/root/include/TStyle.h \
+ /home/tdixon/root/include/TColor.h /home/tdixon/root/include/TGraph.h
 rungA_fit.o: rungA_fit.cxx \
  /home/tdixon/bat/bat-install/include/BAT/BCLog.h gA_fit.h \
  /home/tdixon/bat/bat-install/include/BAT/BCModel.h \
@@ -697,7 +698,11 @@ rungA_fit.o: rungA_fit.cxx \
  /home/tdixon/root/include/Buttons.h \
  /home/tdixon/root/include/TAttCanvas.h \
  /home/tdixon/bat/bat-install/include/BAT/BCMath.h \
- /home/tdixon/root/include/TH2D.h /home/tdixon/root/include/TH2.h \
- /home/tdixon/root/include/TStyle.h /home/tdixon/root/include/TColor.h \
- /home/tdixon/root/include/TGraph.h
+ /home/tdixon/root/include/TH3D.h /home/tdixon/root/include/TH3.h \
+ /home/tdixon/root/include/TAtt3D.h /home/tdixon/root/include/TH2D.h \
+ /home/tdixon/root/include/TH2.h /home/tdixon/root/include/TStyle.h \
+ /home/tdixon/root/include/TColor.h /home/tdixon/root/include/TGraph.h \
+ /home/tdixon/root/include/TSpectrum.h \
+ /home/tdixon/root/include/TApplication.h \
+ /home/tdixon/root/include/TApplicationImp.h
 rungA_fit : rungA_fit.o

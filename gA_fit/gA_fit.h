@@ -17,7 +17,7 @@
 #include <string>
 #include <vector>
 #include <BAT/BCMath.h>
-
+#include "TH3D.h"
 #include "TF1.h"
 #include "TCanvas.h"
 #include "TH1D.h"
@@ -75,22 +75,25 @@ class gA_fit : public BCModel
 public:
 
     // Constructor
-  gA_fit(const std::string& name,TString in_prefix,bool posS);
+
+  gA_fit(const std::string& name,TString path_theory,TString path_data,TString path_bkg,TString path_eff,bool float_eff,bool float_rb,bool posS);
+  void GetEffTH3(TString PathMarkov);
 
     // Destructor
     ~gA_fit();
 
     // Overload LogLikelihood to implement model
     double LogLikelihood(const std::vector<double>& pars);
-  void ReconstructFit(TH1D *&h,TH1D *&hs,double ga,double s,double b);
+  void ReconstructFit(TH1D *&h,TH1D *&hs,double ga,double s,double b,std::vector<double>effpars);
+  void UpdateEff(std::vector<double>effpars);
 
     // Overload LogAprioriProbability if not using built-in 1D priors
-    // double LogAPrioriProbability(const std::vector<double> & pars);
+    double LogAPrioriProbability(const std::vector<double> & pars);
 
     // Overload CalculateObservables if using observables
   void CalculateObservables(const std::vector<double> & pars);
   double GetT12(double ga,double s);
-
+  void SetFloatEff(bool f){fFloatEfficiency=f;};
   void SetInputs(TString in, TString in_bkg)
   {
     fFileIn = new TFile(in);
@@ -113,19 +116,25 @@ public:
   
   TH1D* GetData(){return fData;};
   TH1D * GetBkg(){return fBkg;};
+  TH3D * fEffTH3;
+  
   bool verbose;
   int counter=0;
+  int fIndexEffp0;
+  bool fFloatEfficiency;
+  bool fFloatRb;
 private:
   TH1D *fData;
   TH1D *fBkg;
   gATheoryHandler *fTheory;
   TF1 * fEff;
+  
   double N,t;
   int first;
   int last;
   TFile *fFileIn;
   TFile *fFileInBkg;
-  
+  bool fFloatBias;
 };
 // ---------------------------------------------------------
 

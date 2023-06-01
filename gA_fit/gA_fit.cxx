@@ -133,9 +133,7 @@ void gATheoryHandler::CreateArbitaryGraph(double ga,double sNME,int verbose)
   for (auto  & E: *E_s)
     {
 
-      // now we have an energy, we have gA and sNME and we need the 4 relevant fQij                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 \
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-
+      // now we have an energy, we have gA and sNME and we need the 4 relevant fQij                                                                                                                                                                                                                                                                                     
       double fQ11=fMapofvalues[std::make_tuple(low_ga,low_s,E)];
       double fQ21=fMapofvalues[std::make_tuple(high_ga,low_s,E)];
       double fQ12=fMapofvalues[std::make_tuple(low_ga,high_s,E)];
@@ -186,11 +184,15 @@ void gATheoryHandler::Normalise()
 }
 
 // ---------------------------------------------------------
-gA_fit::gA_fit(const std::string& name,TString in_prefix,bool posS)
-    : BCModel(name)
+gA_fit::gA_fit(const std::string& name,TString path_theory,TString path_data,TString path_bkg,TString path_eff,bool float_eff,bool float_rb,bool posS)
+  : BCModel(name)
 {
-
-  SetInputs("/home/tdixon/Cd113Shape/CROSS_CWOnat/data_CWOnat.root","/home/tdixon/Cd113Shape/CROSS_CWOnat/histo_bkg_model.root");
+  
+  fFloatEfficiency=float_eff;
+  fFloatRb=float_rb;
+  
+  SetInputs(path_data,path_bkg);
+  GetEffTH3(path_eff);
 
   fBkg->Scale(1/(double)fBkg->Integral());
 
@@ -198,7 +200,7 @@ gA_fit::gA_fit(const std::string& name,TString in_prefix,bool posS)
 
   
   
-  fTheory= new gATheoryHandler(Form("../output_%s.root",in_prefix.Data()));
+  fTheory= new gATheoryHandler(Form("%s",path_theory.Data()));
   fTheory->Prepare("h");
 
   //check binning
@@ -219,14 +221,32 @@ gA_fit::gA_fit(const std::string& name,TString in_prefix,bool posS)
   double maxt=1000;
   first= fData->FindBin(threshold);
   last =fData->FindBin(maxt);
+  int count=0;
   AddParameter("ga",0.5,1.3,"ga","[a.u]");
-
+  count++;
   if (posS)
     AddParameter("s",0,3,"S","[a.u]");
   else
     AddParameter("s",-3,0,"S","[a.u]");
-
+  count++;
   AddParameter("b",0,100000,"b","[cts]");
+  count++;
+  // add parameters for the efficiency
+  
+  if (fFloatEfficiency)
+    {
+      fIndexEffp0=count;
+
+      for (int i=0;i<fEff->GetNpar();i++)
+	{
+	  double pmin,pmax;
+	  fEff->GetParLimits(i,pmin,pmax);
+	  std::cout<<"for par "<<i<<" ["<<pmin<<", "<<pmax<<"]"<<std::endl;
+
+	  AddParameter(Form("eff_p%i",i),pmin,pmax,Form("eff_p%i",i),"[]");
+	}
+    }
+
   AddObservable("T",0,2e16,"T_{1/2}","[yrs]");
   GetParameters().SetPriorConstantAll();
   GetParameters().SetNBins(1000);
@@ -252,15 +272,27 @@ gA_fit::~gA_fit()
 }
 
 
+void gA_fit::UpdateEff(std::vector<double>effpars)
+{
+  if (fFloatEfficiency)
+    {
+      for (int i=0;i<fEff->GetNpar();i++)
+	{
+	  fEff->SetParameter(i,effpars[i]);
+	}
+    }
+}
 //----------------------------------------------------------
 
-void gA_fit::ReconstructFit(TH1D *&h,TH1D *&hs,double ga,double s,double b)
+void gA_fit::ReconstructFit(TH1D *&h,TH1D *&hs,double ga,double s,double b,std::vector<double>effpars)
 {
   fTheory->CreateArbitaryGraph(ga,s,0);
   for (int i=fData->FindBin(0);i<last;i++)
     {
 
       double energy =fData->GetBinCenter(i);
+
+      UpdateEff(effpars);
       double sig = fTheory->fHist->GetBinContent(fTheory->fHist->FindBin(energy))*fEff->Eval(energy);
       double b_prob = fBkg->GetBinContent(fBkg->FindBin(energy));
 
@@ -293,6 +325,21 @@ double gA_fit::LogLikelihood(const std::vector<double>& pars)
   double s = pars[1];
   double b =pars[2];
 
+  int count=3;
+  fIndexEffp0=count;
+  std::vector<double>effpars;
+  std::vector<double>biaspars;
+  if (fFloatEfficiency)
+    {
+      for (int i=0;i<fEff->GetNpar();i++)
+	{
+	  effpars.push_back(pars[count]);
+	  count++;
+	}
+    }
+
+
+	    
   // model the data
   fTheory->CreateArbitaryGraph(gA,s,0);
   double logL=0;
@@ -300,24 +347,35 @@ double gA_fit::LogLikelihood(const std::vector<double>& pars)
     {
       std::cout<<"ga = "<<gA<<std::endl;
       std::cout<<"s  = "<<s<<std::endl;
+      std::cout<<"b = "<<b<<std::endl;
     }
+  UpdateEff(effpars);
   for (int i=first;i<last;i++)
     {
       double energy =fData->GetBinCenter(i);
       double N = fData->GetBinContent(i);
       double b_prob = fBkg->GetBinContent(fBkg->FindBin(energy));
       double sig = fTheory->fHist->GetBinContent(fTheory->fHist->FindBin(energy));
+      
       double lambda = sig*fEff->Eval(energy)+b*b_prob;
       if( lambda <= 0. ) continue;
       logL += -lambda + N * log( lambda ) - BCMath::LogFact( N );
 
-      if (verbose &&i%100==0)
+      if (verbose &&i==100)
 	{
 	  std::cout<<"energy = "<<energy<<std::endl;
 	  std::cout<<"N      = "<<N<<std::endl;
 	  std::cout<<"b      = "<<b*b_prob<<std::endl;
+	  std::cout<<"eff = "<<fEff->Eval(energy)<<std::endl;
 	  std::cout<<"sig    = "<<sig<<std::endl;
 	  std::cout<<"lambda = "<<lambda<<std::endl;
+	  if (fFloatEfficiency)
+	    {
+	      for (int j=0;j<fEff->GetNpar();j++)
+		{
+		  std::cout<<"eff p"<<j<<" = "<<effpars[j]<<std::endl;
+		}
+	    }
 	  // std::cout<<" "<<std::endl;
 	  std::cout<<"logL   = "<<logL<<std::endl;
 	  std::cout<<" "<<std::endl;   
@@ -333,14 +391,76 @@ double gA_fit::LogLikelihood(const std::vector<double>& pars)
 
 
 
+void gA_fit::GetEffTH3(TString PathMarkov)
+{
+  fFloatEfficiency=1;
+  TFile *fMarkov = new TFile(PathMarkov);
+  TTree *Tmarkov = (TTree*)fMarkov->Get("fit_mcmc");
 
+  
+  double pmin_x,pmax_x;
+  fEff->GetParLimits(0,pmin_x,pmax_x);
+
+  double pmin_y,pmax_y;
+  fEff->GetParLimits(1,pmin_y,pmax_y);
+
+  double pmin_z,pmax_z;
+  fEff->GetParLimits(2,pmin_z,pmax_z);
+
+
+  fEffTH3=new TH3D("fEffTH3","fEffTH3",100,pmin_x,pmax_x,100,pmin_y,pmax_y,100,pmin_z,pmax_z);
+
+  Tmarkov->Draw("p2:p1:p0>>fEffTH3","phase==1");
+
+  fEffTH3->SaveAs("test.root");
+  
+}
+  
+     
+  
 
 // ---------------------------------------------------------
-// double gA_fit::LogAPrioriProbability(const std::vector<double>& pars)
-// {
-//     // return the log of the prior probability p(pars)
-//     // If you use built-in priors, leave this function commented out.
-// }
+ double gA_fit::LogAPrioriProbability(const std::vector<double>& pars)
+ {
+     // return the log of the prior probability p(pars)
+     // If you use built-in priors, leave this function commented out.
+
+
+   if (fFloatEfficiency)
+     {
+       double p0=pars[fIndexEffp0];
+       double p1=pars[fIndexEffp0+1];
+       double p2=pars[fIndexEffp0+2];
+
+       int binx=fEffTH3->GetXaxis()->FindBin(p0);
+       int biny=fEffTH3->GetYaxis()->FindBin(p1);
+       int binz=fEffTH3->GetZaxis()->FindBin(p2);
+       double bc=fEffTH3->GetBinContent(fEffTH3->GetBin(binx,biny,binz));
+       
+       if (verbose)
+	 {
+	   bc+=1e-50;
+	   std::cout<<bc<<std::endl;
+	   std::cout<<"log(prior) = constant +  "<<log(bc)<<std::endl;
+
+	   std::cout<<" "<<std::endl;
+	   std::cout<<" "<<std::endl;
+
+	 }
+
+
+       if (bc>0)
+	 {
+	   return log(bc);
+	 }
+       else
+	 {
+	   return -1e50;
+	 }
+     }
+   
+   return 0;
+ }
 
 double gA_fit::GetT12(double ga,double s)
 {
@@ -356,8 +476,6 @@ double gA_fit::GetT12(double ga,double s)
    if (verbose)
      {
        std::cout<<"T12 = "<<log(2)*N*t/counts<<std::endl;
-       std::cout<<" "<<std::endl;
-       std::cout<<" "<<std::endl;
 
      }
    return log(2)*N*t/counts;
