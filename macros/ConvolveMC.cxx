@@ -13,7 +13,7 @@
 #include "TCanvas.h"
 #include "TStyle.h"
 
-void ConvolveMC(TString name,TString mc_path,TString reso_path,TString outpath,TString prefix,TString plot_dir,TString reso_label)
+void ConvolveMC(TString name,TString mc_path,TString reso_path,TString outpath,TString prefix,TString plot_dir,TString reso_label,double energy_bias)
 {
   
 
@@ -31,7 +31,7 @@ void ConvolveMC(TString name,TString mc_path,TString reso_path,TString outpath,T
   TMC->Add(mc_path);
   TMC->SetBranchAddress("primary_energy",&Ein_mc);
   TMC->SetBranchAddress("crystal_cwo_nat_totalEdep",&Eout_mc);
-
+  
   TFile *freso = new TFile(reso_path);
   TF1 *fun_res = (TF1*)freso->Get(Form("Resolution_%s",reso_label.Data()));
   
@@ -62,7 +62,7 @@ void ConvolveMC(TString name,TString mc_path,TString reso_path,TString outpath,T
       TMC->GetEntry(i);
       double Elow = bin*trunc((Ein_mc-bin/2.)/bin)+bin/2.;
       double Ehigh = Elow+bin;
-      double Eoutput = rand->Gaus(Eout_mc,fun_res->Eval(Eout_mc)/2.355);
+      double Eoutput = rand->Gaus(Eout_mc,fun_res->Eval(Eout_mc)/2.355)+energy_bias;
       map_of_hist[(int)(round((Elow-bin/2.)/bin))]->Fill(Ein_mc);
       if (i%1000000==0)
 	{
@@ -276,6 +276,7 @@ void Usage()
     std::cout<<"------------------------------------------------------------"<<std::endl;
     std::cout<<"-n (or --name             [name ]              (default: def)"<<std::endl;
     std::cout<<"-b (or --reso-label)      [type of reso sqrt or linear) (default: sqrt)"<<std::endl;
+    std::cout<<"-i (or --energy-bias)     [value of bias (energy meas - energy true) ] (default: 0 keV)"<<std::endl;
     std::cout<<"-m (or --mc-path)         [path to MC]         (default: None)"<<std::endl;
     std::cout<<"-r (or --reso-path)       [path for data]      (default: /home/tdixon/BATGraphHistoFit/inputs/cross/data_CWOnat.root) note: shouuld be after running eff fit"<<std::endl;
     std::cout<<"-o (or --out-path)        [path for out ]      (default: output/ "<<std::endl;
@@ -290,6 +291,7 @@ int main(int argc,char**argv)
 
   TString mc_path="/home/tdixon/Cd113Shape/data/cwa_nat_uniform/rootFiles/*";
   TString reso_path="/home/tdixon/BATGraphHistoFit/inputs/cross/data_CWOnat.root";
+  double energy_bias = 0;
   TString name="def";
   TString out_path="gA_inputs";
   TString prefix="shell";
@@ -300,6 +302,7 @@ int main(int argc,char**argv)
     
     static struct option long_options[] =  {{ "name",required_argument,nullptr,'n'},
 					    { "reso-label",required_argument,nullptr,'b'},
+					    { "energy-bias",required_argument,nullptr,'i'},
 					    {"mc-path",        required_argument, nullptr, 'm'},
                                              {"reso-path", required_argument, nullptr, 'r'},
                                              {"out-path",   required_argument, nullptr, 'o'},
@@ -308,7 +311,7 @@ int main(int argc,char**argv)
 					   { "help",                       no_argument, nullptr, 'h' },
                                              {nullptr, 0, nullptr, 0}
       };
-    const char* const short_options = "n:b:m:r:o:p:l:h";
+    const char* const short_options = "n:b:i:m:r:o:p:l:h";
     int c;
     while ((c = getopt_long(argc, argv, short_options, long_options, nullptr)) != -1 ) {
       switch (c) {
@@ -319,6 +322,10 @@ int main(int argc,char**argv)
       }
       case 'b':{
 	reso_label=optarg;
+	break;
+      }
+      case 'i':{
+	energy_bias=atof(optarg);
 	break;
       }
       case 'm': {
@@ -358,7 +365,7 @@ int main(int argc,char**argv)
   
   
 
-  ConvolveMC(name,mc_path,reso_path,out_path,prefix,plot_dir,reso_label);
+  ConvolveMC(name,mc_path,reso_path,out_path,prefix,plot_dir,reso_label,energy_bias);
 
   return 1;
 
