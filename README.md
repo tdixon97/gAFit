@@ -1,4 +1,4 @@
-# Fit to the ^{113}Cd \beta^{-} spectrum to extract the effective value of g_{A}.
+# Fit to the $^{113}$Cd $\beta^{-}$ spectrum to extract the effective value of $g_{A}$.
 ## Author: Toby Dixon (toby.dixon@universite-paris-saclay.fr)
 ## Date  : June 1 2023
 
